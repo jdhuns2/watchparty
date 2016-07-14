@@ -1,0 +1,13 @@
+package com.example.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.Repository;
+
+import com.example.entities.Episode;
+
+
+public interface EpisodeRepository extends JpaRepository<Episode, Long>{
+	Episode findOneById(long id);
+	Episode save(Episode e);
+	
+}
